@@ -31,12 +31,12 @@ a separate network that calculates value (which is not required) is not created.
 '''
 config = DEFAULT_CONFIG
 config['env'] = 'CartPole-v0'
-config['framework'] = 'tf2' # using tf2 to conveniently view model
+config['framework'] = 'tf2' # using tensorflow to conveniently view model
 
 # modify config
 
 
-trainer = PGTrainer(config) # For seeing the model specs
+trainer = PGTrainer(config) # only for seeing the model specs
 print(trainer.get_policy().model.base_model.summary())
 
 # Initialize ray and train the policy using tune.
